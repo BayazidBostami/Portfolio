@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    *,
+    body,
+    html {
+        @apply font-jost;
+    }
+
+    h1 {
+        @apply text-[100px] leading-[1.1] text-primary font-vollkorn;
+    }
+
+    p {
+        @apply text-base leading-[1.1] text-primary/40;
+    }
+}
+
+@layer utilities {}
+
+@layer components {
+    .btn {
+        @apply bg-secondery py-[18px] px-[42px] border border-white outline outline-4 outline-secondery text-white hover:bg-secondery/90
+    }
+}
+
+.after_shape::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #E5745D;
+    z-index: 10;
+}
+
+.testimonial_shadow {
+    position: relative;
+    filter: drop-shadow(6px 6px 10px rgba(227, 40, 71, 0.5));
+}
+
+.testimonial_shadow::after {
+    content: "";
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-top: 25px solid white;
+    border-right: 20px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    left: 80px;
+    bottom: -25px;
+    z-index: 10;
+}
