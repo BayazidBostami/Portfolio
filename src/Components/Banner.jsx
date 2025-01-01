@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from './UI/Container';
 import Button from './UI/Button';
-import BannerImg from '../assets/BannerBackground.png';
+import BannerImg from '../assets/Bayazid.jpg';
 
 const Banner = () => {
 
